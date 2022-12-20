@@ -9,14 +9,17 @@ function Home() {
   const calorieCounting = () => {
     const inputArr = input.split(/\n/);
     for (let i = 0; i < inputArr.length; i++) {
-      caloriesInput.push(inputArr[i]);
+      if (inputArr[i] !== "") {
+        caloriesInput.push(Number(inputArr[i]));
+      } else {
+        caloriesInput.push("");
+      }
     }
-    console.log(caloriesInput);
+    console.log(caloriesInput.reduce((partialSum, a) => partialSum + a, 0));
   };
 
   const handleInput = (e) => {
     setInput(e.target.value);
-    calorieCounting();
   };
 
   return (
@@ -27,6 +30,7 @@ function Home() {
             Input:
             <textarea value={input} onChange={handleInput} />
           </label>
+          <Button onClick={calorieCounting()}>Count Cals</Button>
         </form>
 
         <Row className="tile">
