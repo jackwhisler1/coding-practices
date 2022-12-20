@@ -24,13 +24,13 @@ function Home() {
 
   return (
     <>
-      <div className="tile">
-        <form>
-          <label>
-            Input:
-            <textarea value={input} onChange={handleInput} />
-          </label>
-          <Button onClick={calorieCounting()}>Count Cals</Button>
+      <div className="tile mt-2">
+        <form className="">
+          <textarea className="mx-4 my-2 p-1" value={input} onChange={handleInput} />
+
+          <Button onClick={calorieCounting} className="m-2 mb-5">
+            Count Cals
+          </Button>
         </form>
 
         <Row className="tile">
