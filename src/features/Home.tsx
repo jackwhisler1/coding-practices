@@ -48,10 +48,7 @@ function Home() {
           <Col className="bg-primary"></Col>
           <Col className="bg-dark"></Col>
           <Col className="bg-primary"></Col>
-          <Col className="bg-dark"></Col>
-          <Col className="bg-primary"></Col>
-          <Col className="bg-dark"></Col>
-          <Col className="bg-primary"></Col>
+
         </Row>
       </div>
     </>
